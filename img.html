@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Image Page 1</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+<body>
+  <div class="container">
+  
+  </div>
+  <div class="container" id="imageContainer">
+
+    <img src="" alt="Certification Image" id="imageElement">
+  </div>
+</body>
+
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+
+      const imageElement = document.getElementById('imageElement');
+
+      const urlParams = new URLSearchParams(window.location.search);
+
+      const imageToShow = urlParams.get('image');
+
+      function showImage(imageSrc) {
+        imageElement.src = imageSrc;
+      }
+
+      if (imageToShow === 'image1') {
+        showImage('assets/photo/php Laravel.png');
+      } if (imageToShow === 'image2') {
+        showImage('assets/photo/EC-Council Certified Network Defender.png');
+      }
+      if (imageToShow === 'image3') {
+        showImage('assets/photo/Back End Development.png');
+      } 
+      if (imageToShow === 'image4') {
+        showImage('assets/photo/cooperative training.png');
+      } 
+      if (imageToShow === 'image5') {
+        showImage('assets/photo/Linux.png');
+      } 
+      if (imageToShow === 'image6') {
+        showImage('assets/photo/Cybersecurity Incident Response Analysis.png');
+      } 
+    });
+  </script>
+
+
+</html>
